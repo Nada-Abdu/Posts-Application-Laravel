@@ -5,7 +5,7 @@
 <div class="wrapper">
     <!-- Sidebar  -->
   <x-SideBar>
-    
+
   </x-SideBar>
     <!-- Page Content  -->
     <div id="content">
@@ -82,12 +82,12 @@
 
                         <div class="row align-items-center justify-content-center" >
                             <label class="image-post" for="picture__input" tabIndex="0">
-                                <span class="picture__image" id='picture__image'>
+                                <span class="" id='picture__image'>
                                     @if (file_exists(public_path() . '/storage/posts_images/' . $post->image) && $post->image)
                                         <img src="{{ url('storage/posts_images/' .  $post->image) }} "
-                                            class="picture__img" alt=" Avatar">
+                                            class="image-post" alt=" Avatar">
                                     @else
-                                        <img src="{{ url('storage/posts_images/default-image.jpg') }} "    class="picture__img" alt=" Avatar">
+                                        <img src="{{ url('storage/posts_images/default-image.jpg') }} "    class="image-post" alt=" Avatar">
                                     @endif
                                 </span>
                               </label>

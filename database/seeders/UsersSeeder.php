@@ -19,7 +19,8 @@ class UsersSeeder extends Seeder
         if ($admin == null) {
             $admin =   User::create([
                 'name' => 'Admin',
-                'email' => 'admin@bolgs.com',
+                'email' => 'admin@posts.com',
+                'image' => 'user1.jpg',
                 'password' => Hash::make('password'),
             ]);
 
@@ -29,9 +30,20 @@ class UsersSeeder extends Seeder
 
         if (User::count() == 1) {
             $userRole = Role::where('name',  UserRoles::User)->first();
-            $users =  User::factory(10)->create()->each(function ($user) use ($userRole) {
-                $user->roles()->sync($userRole);
-            });
+            $user1 =   User::create([
+                'name' => 'Ahmed',
+                'email' => 'ahmed@posts.com',
+                'image' => 'user2.jpg',
+                'password' => Hash::make('password'),
+            ]);
+            $user1->roles()->sync($userRole);
+            $user2 =   User::create([
+                'name' => 'Ali',
+                'email' => 'ali@posts.com',
+                'image' => 'user3.jpg',
+                'password' => Hash::make('password'),
+            ]);
+            $user2->roles()->sync($userRole);
         }
     }
 }

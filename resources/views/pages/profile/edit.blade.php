@@ -61,13 +61,12 @@
                     </div>
 
                     <div class="form-group last mb-3">
-                        <span style='color:red'>*</span>
                         <label for="email" class="font-weight-bold" >{{ __('Email Address') }}</label>
                         <input id="email" type="email" class="form-control " name="email" value="{{ $user->email }}" readonly >
                     </div>
 
                     <div class="form-group last mb-3">
-                        <span style='color:red'>*</span>
+
                         <label for="password" class="font-weight-bold">{{ __('Password') }}</label>
 
                         <input id="password" value="" placeholder="To keep current password, leave it blank" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password">
@@ -80,7 +79,7 @@
                     </div>
 
                     <div class="form-group last mb-3">
-                        <span style='color:red'>*</span>
+
                         <label for="password-confirm" class="font-weight-bold">{{ __('Confirm Password') }}</label>
                         <input id="password-confirm" value="" placeholder="To keep current password, leave it blank"  type="password" class="form-control" name="password_confirmation"  autocomplete="new-password">
                     </div>
