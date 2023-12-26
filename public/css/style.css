@@ -210,7 +210,13 @@ h2 {
     border-radius: 200px;
     object-fit: cover;
  }
-
+/* .user-img-profile{
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 200px;
+    object-fit: cover;
+} */
  .post-img{
     width: 150px;
     height: 150px;
@@ -224,7 +230,7 @@ h2 {
    -webkit-box-orient: vertical;
 }
 
-.card{
+.card-post{
     height: 150px;
 }
 
@@ -244,3 +250,117 @@ h2 {
 color: #E38569 !important;
 }
 
+.general-form{
+    background-color: #fff !important;
+    border-radius: 5px;
+    border: 1px solid rgb(228, 228, 228);
+    padding:  30px !important;
+}
+
+.post-content{
+    background-color: #fff !important;
+    border-radius: 5px;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+.image-post {
+    width: 400px !important;
+    height: 350px !important;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+
+.content-scroll{
+	float: left;
+	height: 530px;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+    overflow-x: hidden;
+
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #E38569 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  /* *::-webkit-scrollbar-track {
+    background: #ffffff;
+  } */
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #E38569;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  .p-color{
+   color:#6d7fcc ;
+  }
+
+  .o-color{
+    color:#E38569 ;
+   }
+
+   .p-description{
+    color: #000;
+   }
+
+   .heder-form{
+    background-color: #ebebeb !important;
+    padding: 8px;
+   }
+
+   .form-footer{
+    background-color: #ebebeb !important;
+    padding: 8px;
+   }
+
+   .card-comment{
+    background-color: #fff !important;
+    border-radius: 5px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: 20px 8px 20px 8px;
+    /* height: fit-content; */
+   }
+
+   .comment-content-scroll{
+    float: left;
+	max-height: 500px;
+	overflow-y: scroll;
+    overflow-x: hidden;
+    background: transparent;
+    }
+
+    .user-img-comment{
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 200px;
+        object-fit: cover;
+    }
+
+    .comment-time{
+        font-size: 13px;
+        color: #7b7b7b;
+    }
+
+    .sub-title{
+        co
+    }

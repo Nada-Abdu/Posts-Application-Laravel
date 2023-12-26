@@ -30,6 +30,7 @@
 
 
                             <div class="form-group first">
+                                <span style='color:red'>*</span>
                                 <label for="name" class="font-weight-bold">{{ __('Name') }}</label>
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -42,6 +43,7 @@
                             </div>
 
                             <div class="form-group last mb-3">
+                                <span style='color:red'>*</span>
                                 <label for="email" class="font-weight-bold" >{{ __('Email Address') }}</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
@@ -53,6 +55,7 @@
                             </div>
 
                             <div class="form-group last mb-3">
+                                <span style='color:red'>*</span>
                                 <label for="password" class="font-weight-bold">{{ __('Password') }}</label>
 
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -65,6 +68,7 @@
                             </div>
 
                             <div class="form-group last mb-3">
+                                <span style='color:red'>*</span>
                                 <label for="password-confirm" class="font-weight-bold">{{ __('Confirm Password') }}</label>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>

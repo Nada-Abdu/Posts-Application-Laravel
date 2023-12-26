@@ -18,17 +18,18 @@ Route::get('/', function () {
     return view('auth.login');
 })->middleware("guest");;
 
-Route::middleware(['auth'])->group(function () {
-    // web user
-    Route::middleware(['webUser'])->prefix('user')->group(function () {
-        // posts
-        Route::resource('/posts', \App\Http\Controllers\UserPostController::class);
-    });
+Route::middleware(['auth', 'webUser'])->group(function () {
+    // dashboard
+    Route::resource('/user', \App\Http\Controllers\UserController::class);
 
-    // admin
-    Route::middleware(['admin'])->prefix('admin')->group(function () {
-        Route::get('/dashboard', [App\Http\Controllers\AdminDashboardController::class, 'index'])->name('admin.dashboard');
-    });
+    // dashboard
+    Route::resource('/dashboard', \App\Http\Controllers\DashboardController::class);
+
+    // posts
+    Route::resource('/posts', \App\Http\Controllers\PostController::class);
+
+    // comments
+    Route::resource('/comments', \App\Http\Controllers\CommentController::class);
 });
 
 

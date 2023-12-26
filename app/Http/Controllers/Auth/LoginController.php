@@ -33,10 +33,8 @@ class LoginController extends Controller
     protected function authenticated()
     {
         $user = auth()->user();
-        if ($user->isAdmin()) {
-            return redirect()->route('admin.dashboard');
-        } else if ($user->isWebUser()) {
-            return redirect()->route('posts.index');
+        if ($user->isAdmin() || $user->isWebUser()) {
+            return redirect()->route('dashboard.index');
         } else {
             return redirect()->route('/');
         }

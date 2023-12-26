@@ -18,7 +18,7 @@ class WebUser
     public function handle(Request $request, Closure $next): Response
     {
         $user = auth()->user();
-        if ($user->isWebUser())
+        if ($user->isAdmin() || $user->isWebUser())
             return $next($request);
         return redirect('/');
     }
